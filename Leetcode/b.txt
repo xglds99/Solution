@@ -1,0 +1,351 @@
+
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   https://www.baidu.com/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   http://www.cuaa.net/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   https://www.xiami.com/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   https://www.tmall.com/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   https://www.sina.com.cn/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   https://www.sohu.com/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   https://www.163.com/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   https://www.qq.com/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   https://www.taobao.com/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   https://www.mop.com/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   https://www.sogou.com/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   https://www.126.com/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   https://www.ebay.cn/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   http://www.zsyunyue.com/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   https://www.hao123.com/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   http://www.xinhuanet.com/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   https://www.pconline.com.cn/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   http://www.soufun.com/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   http://www.21cn.com/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   https://www.blogchina.com/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   http://www.ynet.com/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   https://www.yisou.com/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   http://www.cnnic.net.cn/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   https://www.cctv.com/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   http://www.yesky.com/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   https://www.homeway.com.cn/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   https://www.chinaz.com/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   http://www.people.com.cn/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   https://www.kingsoft.com/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   https://www.51job.com/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   http://www.10086.cn/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   https://www.zol.com.cn/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   https://www.online.sh.cn/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   http://www.chinahr.com/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   https://www.onlinedown.net/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   http://www.skycn.com/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   http://www.chinacars.com/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   http://www.icbc.com.cn/icbc/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   http://www.cmbchina.com/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   http://www.hrbeu.edu.cn/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   https://www.lottery.gov.cn/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   https://www.runoob.com/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   https://www.csdn.net/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   https://www.aliyun.com/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   https://www.liaoxuefeng.com/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   https://www.qau.edu.cn/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   http://www.lnpu.edu.cn/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   https://www.hit.edu.cn/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   https://www.tsinghua.edu.cn/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe   https://www.pku.edu.cn/
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)

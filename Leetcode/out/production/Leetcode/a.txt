@@ -1,0 +1,7 @@
+for /l %%i in (1,1,100) do (
+echo %%i
+start D:\QQBrowser\QQBrowser.exe "https://www.baidu.com"
+timeout /T 35 /NOBREAK
+ 
+taskkill /f /t /im QQBrowser.exe
+)
