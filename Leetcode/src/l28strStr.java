@@ -1,6 +1,7 @@
 public class l28strStr {
     public static void main(String[] args) {
-
+        StringBuilder  stringBuilder  =  new StringBuilder();
+        StringBuffer stringBuffer  =new StringBuffer();
     }
 
     public  int strStr(String haystack,String needle){

@@ -2,26 +2,26 @@ package com.atguigu.tree;
 
 import java.util.Deque;
 import java.util.LinkedList;
+import java.util.Queue;
 
 public class BinaryTreeDemo {
     public static void main(String[] args) {
         BinaryTree binaryTree = new BinaryTree();
-        HeroNode root = new HeroNode(1, "宋江");
-        HeroNode node1 = new HeroNode(2, "吴用");
-        HeroNode node2 = new HeroNode(3, "卢俊义");
-        HeroNode node3 = new HeroNode(4, "林冲");
-        HeroNode node4 = new HeroNode(5, "李广");
+        HeroNode root = new HeroNode(0, "宋江");
+        HeroNode node1 = new HeroNode(1, "吴用");
+        HeroNode node2 = new HeroNode(2, "卢俊义");
+        HeroNode node3 = new HeroNode(3, "林冲");
+        HeroNode node4 = new HeroNode(4, "李广");
         binaryTree.setRoot(root);
         root.setLeft(node1);
         root.setRight(node2);
         node2.setRight(node3);
         node2.setLeft(node4);
-        binaryTree.postOrder_1();
+        binaryTree.levelOrder();
         System.out.println("***********");
         binaryTree.delNode(5);
         binaryTree.postOrder();
     }
-
 }
 
 //定义二叉树
@@ -79,8 +79,8 @@ class BinaryTree {
         } else {
             System.out.println("该二叉树为空");
         }
-    }/*
-*/
+    }
+
     /**
      * 前序遍历的非递归写法
      */
@@ -110,16 +110,17 @@ class BinaryTree {
             System.out.println("该二叉树为空");
         }
     }
+
     //中序遍历非递归写法
-    public void infixOrder_1(){
+    public void infixOrder_1() {
         HeroNode p = root;
         Deque<HeroNode> st = new LinkedList<>();
-        while (!st.isEmpty() || p != null){
-            while ( p!= null){
+        while (!st.isEmpty() || p != null) {
+            while (p != null) {
                 st.push(p);
                 p = p.getLeft();
             }
-            if (!st.isEmpty()){
+            if (!st.isEmpty()) {
                 HeroNode pop = st.pop();
                 System.out.println(pop);
                 p = pop.getRight();
@@ -160,7 +161,29 @@ class BinaryTree {
                     flag = false;
                 }
             }
-        }while (!st.isEmpty());
+        } while (!st.isEmpty());
+    }
+
+    /**
+     * 层序遍历
+     */
+    public void levelOrder() {
+
+        if(this.root == null){
+            return;
+        }
+        Queue<HeroNode> queue =new LinkedList<>();
+        queue.add(root);
+        while (!queue.isEmpty()){
+            HeroNode cur = queue.poll();
+            System.out.println(cur);
+            if (cur.getLeft() != null){
+                queue.add(cur.getLeft());
+            }
+            if (cur.getRight() != null){
+                queue.add(cur.getRight());
+            }
+        }
     }
 }
 
