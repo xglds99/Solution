@@ -46,12 +46,25 @@ public class TestAvt {
         return new ReturnType(isBalanced, height);
     }
 
+    public static int height(Node head){
+        if (head == null)
+            return 0;
+        return Math.max(height(head.getRight()), height(head.getLeft())) + 1;
+    }
+
+    public static boolean isAVL_1(Node head){
+        if (head == null)
+            return true;
+        return isAVL_1(head.getLeft()) && isAVL_1(head.getRight()) && Math.abs(height(head.getRight()) -
+                height(head.getLeft())) < 2;
+    }
+
     public static void main(String[] args) {
         Node head = new Node(7);
         head.setLeft(new Node(4));
         head.getLeft().setLeft(new Node(2));
         head.getLeft().setRight(new Node(6));
         head.setRight(new Node(9));
-        System.out.println(isBalanced(head));
+        System.out.println(isAVL_1(head));
     }
 }

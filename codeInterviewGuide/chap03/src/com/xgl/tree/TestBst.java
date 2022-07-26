@@ -63,7 +63,7 @@ public class TestBst {
                     } else {
                         preValue = head.getValue();
                     }
-                    head = head.getLeft();
+                    head = head.getRight();
                 }
             }
         }
@@ -82,6 +82,7 @@ public class TestBst {
             this.max = max;
         }
     }
+    
 
     public static ReturnType process(Node head) {
         if (head == null) {
@@ -112,6 +113,8 @@ public class TestBst {
         }
         return new ReturnType(isBst, min, max);
     }
+
+
     public static boolean isBst_1(Node head){
         return process(head).isBst;
     }
