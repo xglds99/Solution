@@ -1,5 +1,8 @@
 package com.xgl.tree;
 
+import org.junit.Test;
+
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -20,7 +23,6 @@ public class TreeMaxWidth {
 
 
     public Integer getMaxWidth(Node head) {
-
         if (head == null) {
             return 0;
         }

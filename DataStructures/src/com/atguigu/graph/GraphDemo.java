@@ -150,7 +150,7 @@ class Graph {
         int u; // 队列的头节点对应的下标
         int w; //邻接结点w
         //队列，记录节点的顺序
-        LinkedList queue = new LinkedList();
+        LinkedList<Integer> queue = new LinkedList<Integer>();
         //访问节点
         System.out.print(getValueByIndex(i) + "=>");
         //标记为已访问
@@ -159,7 +159,7 @@ class Graph {
         queue.add(i);
         while (!queue.isEmpty()) {
             // 取出队列的头节点下标
-            u = (int) queue.removeFirst();
+            u = queue.removeFirst();
             // 得到第一个邻接结点的下表w
             w = getFirstNeighbor(u);
             while (w != -1) {
