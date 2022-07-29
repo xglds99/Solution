@@ -26,9 +26,7 @@ public class Code01_BFS {
             }
         }
     }
-
-
-    public void bfsByR(Node node) {
+    public void bfs_1(Node node) {
         if (node == null) {
             return;
         }
