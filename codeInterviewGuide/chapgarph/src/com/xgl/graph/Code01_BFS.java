@@ -26,7 +26,8 @@ public class Code01_BFS {
             }
         }
     }
-    public void bfs_1(Node node) {
+
+    public void bfsByR(Node node) {
         if (node == null) {
             return;
         }
@@ -41,6 +42,25 @@ public class Code01_BFS {
                 if (!isVisited.contains(x)) {
                     queue.add(x);
                     isVisited.add(x);
+                }
+            });
+        }
+    }
+
+    public void bfs_1(Node node){
+        if (node == null)
+            return;
+        HashSet<Node> isVisited = new HashSet<>();
+        Queue<Node> queue = new LinkedList<>();
+        isVisited.add(node);
+        queue.add(node);
+        while (!queue.isEmpty()){
+            Node poll = queue.poll();
+            System.out.println(poll);
+            poll.nexts.forEach(next ->{
+                if (!isVisited.contains(next)){
+                    queue.add(next);
+                    isVisited.add(next);
                 }
             });
         }
