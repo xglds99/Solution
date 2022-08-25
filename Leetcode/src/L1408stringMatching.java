@@ -14,16 +14,16 @@ public class L1408stringMatching {
     public static List<String> stringMatching(String[] words) {
 
         Arrays.sort(words);
-        for (int i = 0; i < words.length; i++) {
-            System.out.print(words[i] + " --");
+        for (String value : words) {
+            System.out.print(value + " --");
         }
         List<String> resu = new ArrayList<>();
-        for (int i = 0; i < words.length; i++) {
-            for (int j = 0; j < words.length; j++) {
-                if (words[i].length() > words[j].length())
+        for (String s : words) {
+            for (String word : words) {
+                if (s.length() > word.length())
                     continue;
-                if (KMP(words[j],words[i] )!= -1)
-                    resu.add(words[i]);
+                if (KMP(word, s) != -1)
+                    resu.add(s);
 
             }
         }
