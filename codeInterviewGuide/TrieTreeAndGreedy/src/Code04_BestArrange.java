@@ -34,10 +34,10 @@ public class Code04_BestArrange {
 		Arrays.sort(programs, Comparator.comparingInt(x -> x.end));
 		int result = 0;
 		//从左至右遍历所有的会议
-		for (int i = 0; i < programs.length; i++) {
-			if (start <= programs[i].start) {
+		for (Program program : programs) {
+			if (start <= program.start) {
 				result++;
-				start = programs[i].end;
+				start = program.end;
 			}
 		}
 		return result;
