@@ -2,7 +2,7 @@ package com.xgl.tree;
 
 import org.junit.Test;
 
-import java.util.Arrays;
+
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -11,15 +11,15 @@ public class TreeMaxWidth {
 
     public static void main(String[] args) {
         Node head = new Node();
-        head.setValue(0);
-        head.setLeft(new Node(1));
+        head.setValue(1);
+        head.setLeft(new Node(3));
         head.setRight(new Node(2));
-        head.getRight().setLeft(new Node(4));
-        head.getRight().setRight(new Node(3));
+        head.getLeft().setLeft(new Node(5));
+        head.getLeft().setRight(new Node(3));
+        head.getRight().setRight(new Node(9));
         Integer maxWidth = new TreeMaxWidth().getMaxWidth(head);
         System.out.println(maxWidth);
     }
-
 
 
     public Integer getMaxWidth(Node head) {
@@ -38,11 +38,10 @@ public class TreeMaxWidth {
             Integer curNodeLevel = levelMap.get(cur);
             if (curNodeLevel == curLevel) {
                 curLevelNodes++;
-            }
-            else {
+            }else {
                 max = Math.max(max, curLevelNodes);
                 curLevel++;
-                curLevelNodes = 1;
+                curLevelNodes =1;
             }
             if (cur.getLeft() != null) {
                 levelMap.put(cur.getLeft(), curNodeLevel + 1);
@@ -53,7 +52,8 @@ public class TreeMaxWidth {
                 queue.add(cur.getRight());
             }
         }
-        return max;
+
+        return Math.max(max, curLevelNodes);
     }
 
 

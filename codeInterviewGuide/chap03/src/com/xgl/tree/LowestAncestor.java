@@ -55,26 +55,4 @@ public class LowestAncestor {
         }
         return left != null ? left : right;
     }
-
-
-    public void postOrder(Node head) {
-        if (head == null) {
-            return;
-        }
-        if (head.getLeft() != null) {
-            postOrder(head.getRight());
-        }
-        if (head.getRight() != null) {
-            postOrder(head.getRight());
-        }
-        System.out.println(head);
-    }
-
-
-    @Test
-    public void test() {
-        String s = Integer.toString(1);
-        System.out.println(2 + s);
-        System.out.println(Integer.parseInt(2 + s));
-    }
 }
