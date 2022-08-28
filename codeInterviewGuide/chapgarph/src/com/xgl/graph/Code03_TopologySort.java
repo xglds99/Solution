@@ -1,7 +1,5 @@
 package com.xgl.graph;
 
-import org.junit.Test;
-
 import java.util.*;
 
 public class Code03_TopologySort {
@@ -28,15 +26,5 @@ public class Code03_TopologySort {
 			}
 		}
 		return result;
-	}
-
-
-	@Test
-	public void test(){
-		Map<String,Object> map= new HashMap<>();
-		map.put("1", 2);
-		map.put("1", 2);
-		System.out.println(map.size());
-		System.out.println(map.get("1"));
 	}
 }
