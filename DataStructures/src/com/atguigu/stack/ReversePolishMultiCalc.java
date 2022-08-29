@@ -180,7 +180,7 @@ public class ReversePolishMultiCalc {
     public static Double doTheMath(String s1,String s2,String symbol){
         Double result ;
         switch (symbol){
-            case ADD : result = Double.valueOf(s1) + Double.valueOf(s2); break;
+            case ADD : result = Double.parseDouble(s1) + Double.parseDouble(s2); break;
             case MINUS : result = Double.valueOf(s1) - Double.valueOf(s2); break;
             case TIMES : result = Double.valueOf(s1) * Double.valueOf(s2); break;
             case DIVISION : result = Double.valueOf(s1) / Double.valueOf(s2); break;
