@@ -10,7 +10,7 @@ public class SeriByPre {
     public static void main(String[] args) {
         String s = "1,2,3,4,";
         String[] split = s.split(",");
-
+        System.out.println(split.length);
         for (String s1 : split) {
             System.out.print(s1);
         }

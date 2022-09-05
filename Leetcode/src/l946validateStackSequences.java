@@ -15,4 +15,23 @@ public class l946validateStackSequences {
         return stack.isEmpty();
     }
 
+
+    public static void main(String[] args) {
+        int []nums = new int[]{1,2,3,4};
+        for (int num : nums) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+        swap(nums, 0, 2);
+        for (int num : nums) {
+            System.out.print(num + " ");
+        }
+
+    }
+
+    public static void swap(int []nums, int i, int j){
+        int temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
+    }
 }

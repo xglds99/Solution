@@ -50,7 +50,7 @@ public class l29divide {
        if(flag1 && flag2){
            return resu;
        }
-       if((flag1 ==true && flag2==false) || (flag1 ==false && flag2==true)){
+       if(flag1 || flag2){
            return  -1*resu;
        }
        return  resu;
