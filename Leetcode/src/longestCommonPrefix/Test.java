@@ -10,8 +10,8 @@ public class Test {
     }
     static  String s;
     public static void main(String[] args) {
-        System.out.println(s=="123456");
+        System.out.println(s.equals("123456"));
         String s= A+"456";
-        System.out.println(s=="123456");
+        System.out.println(s.equals("123456"));
     }
 }

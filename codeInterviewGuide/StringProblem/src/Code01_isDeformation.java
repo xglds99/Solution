@@ -4,7 +4,7 @@ public class Code01_isDeformation {
         String str2 = "ed14sac";
         System.out.println(isDeformation(str1, str2));
 
-        System.out.println('A' - '\0');
+        System.out.println('A');
     }
 
     public static boolean isDeformation(String str1,String str2){

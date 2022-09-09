@@ -1,4 +1,9 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Code09_NQueens {
+	List<List<String>> resu = new ArrayList<>();
 
 	public static int num1(int n) {
 		if (n < 1) {
@@ -17,6 +22,8 @@ public class Code09_NQueens {
 	 */
 	public static int process1(int i, int[] record, int n) {
 		if (i == n) {
+			List<String> list = generateBoard(record, n);
+			//resu.add(list);
 			return 1;
 		}
 		int res = 0;
@@ -44,7 +51,16 @@ public class Code09_NQueens {
 		}
 		return true;
 	}
-
+	public  static List<String> generateBoard(int[] queens, int n) {
+		List<String> board = new ArrayList<String>();
+		for (int i = 0; i < n; i++) {
+			char[] row = new char[n];
+			Arrays.fill(row, '.');
+			row[queens[i]] = 'Q';
+			board.add(new String(row));
+		}
+		return board;
+	}
 	public static int num2(int n) {
 		if (n < 1 || n > 32) {
 			return 0;
