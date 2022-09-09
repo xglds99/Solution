@@ -3,8 +3,8 @@ public class Code01_isDeformation {
         String str1 = "acdes14";
         String str2 = "ed14sac";
         System.out.println(isDeformation(str1, str2));
-
         System.out.println('A');
+        System.out.println(0 & -1);
     }
 
     public static boolean isDeformation(String str1,String str2){
