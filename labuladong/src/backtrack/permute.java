@@ -21,6 +21,7 @@ public class permute {
             return;
         }
         for(int i = 0; i< len ;i++){
+            //怎么样保证选取的元素不会重复，通过使用一个used数组，如果一个元素对应的下表是true，就被使用，不应该被加入列表
             System.out.println("当前所在层数:" + depth);
             if (!used[i]){
                 path.addLast(nums[i]);

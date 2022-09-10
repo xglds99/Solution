@@ -25,6 +25,8 @@ public class subSet {
             track.addLast(nums[i]);
            // System.out.println("递归前=>" + track);
             // 通过 start 参数控制树枝的遍历，避免产生重复的子集
+            //使用start的参数保证不会向前遍历（保证不使用相同的元素），之后在本位置数组之后的位置遍历。
+            //这个 i 从 start 开始，那么下一层回溯树就是从 start + 1 开始，从而保证 nums[start] 这个元素不会被重复使用：
             backtrack(nums, i + 1);
             track.removeLast();
             // 撤销选择

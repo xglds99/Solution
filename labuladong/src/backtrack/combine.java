@@ -16,6 +16,12 @@ public class combine {
         return resu;
     }
 
+    /**
+     * 组合和子集的回溯逻辑相同，就是在满足条件不同。
+     * @param start
+     * @param nums
+     * @param k
+     */
     public void dfs(int start,int []nums,int k){
         if(track.size() == k){
             resu.add(new LinkedList<>(track));
