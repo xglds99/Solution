@@ -158,7 +158,7 @@ public class AVLTree extends AbstractSelfBalancingBinarySearchTree {
      */
     private int maxHeight(AVLNode node1, AVLNode node2) {
         if (node1 != null && node2 != null) {
-            return node1.height > node2.height ? node1.height : node2.height;
+            return Math.max(node1.height, node2.height);
         } else if (node1 == null) {
             return node2 != null ? node2.height : -1;
         } else if (node2 == null) {

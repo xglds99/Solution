@@ -15,10 +15,6 @@ public class SeriByPre {
             System.out.print(s1);
         }
     }
-
-
-
-
     public static String seribypre(Node head){
         if (head == null){
             return "#_";
@@ -42,7 +38,7 @@ public class SeriByPre {
         }
         Node head = new Node(Integer.valueOf(value));
         head.setLeft(reconByPreString(queue));
-        head.setLeft(reconByPreString(queue));
+        head.setRight(reconByPreString(queue));
         return head;
     }
 }
