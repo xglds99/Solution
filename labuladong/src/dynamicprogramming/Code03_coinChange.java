@@ -87,5 +87,9 @@ public class Code03_coinChange {
         return dp[amount] == amount + 1 ? -1 : dp[amount];
     }
 
+    public static void main(String[] args) {
+
+    }
+
 
 }

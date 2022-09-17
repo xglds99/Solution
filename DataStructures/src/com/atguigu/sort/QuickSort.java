@@ -16,16 +16,16 @@ public class QuickSort {
      *
      * 参数说明:
      *     a -- 待排序的数组
-     *     l -- 数组的左边界(例如，从起始位置开始排序，则l=0)
-     *     r -- 数组的右边界(例如，排序截至到数组末尾，则r=a.length-1)
+     *     left -- 数组的左边界(例如，从起始位置开始排序，则l=0)
+     *     right -- 数组的右边界(例如，排序截至到数组末尾，则r=a.length-1)
      */
-    public static void quickSort(int[] a, int l, int r) {
+    public static void quickSort(int[] a, int left, int right) {
 
-        if (l < r) {
+        if (left < right) {
             int i,j,x;
 
-            i = l;
-            j = r;
+            i = left;
+            j = right;
             x = a[i];
             while (i < j) {
                 while(i < j && a[j] > x)
@@ -38,8 +38,8 @@ public class QuickSort {
                     a[j--] = a[i];
             }
             a[i] = x;
-            quickSort(a, l, i-1); /* 递归调用 */
-            quickSort(a, i+1, r); /* 递归调用 */
+            quickSort(a, left, i-1); /* 递归调用 */
+            quickSort(a, i+1, right); /* 递归调用 */
         }
     }
 

@@ -6,22 +6,19 @@ public class l287findDuplicate {
 
      */
     public static void main(String[] args) {
-        int nums[]=new int[]{6,6,6,6};
+        int[] nums =new int[]{6,6,6,6};
         System.out.println(findDuplicate(nums));
     }
 
-    public  static  int findDuplicate(int nums[]){
-        int n= nums.length;
-        int i=0;
-        int resu=0;
-        for (; i <n-1 ; i++) {
-            for (int j = i+1; j < n; j++) {
-                if(nums[i]==nums[j]){
-                    resu=nums[i];
-                }
+    public  static  int findDuplicate(int[] nums){
+        int[] map = new int[nums.length +1];
+        int res = 0;
+        for (int num : nums) {
+            if (map[num] != 0) {
+                res = num;
             }
-
+            map[num]++;
         }
-        return resu;
+        return res;
     }
 }

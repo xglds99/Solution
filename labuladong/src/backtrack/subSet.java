@@ -1,5 +1,7 @@
 package backtrack;
 
+import org.junit.Test;
+
 import java.util.*;
 
 public class subSet {
@@ -37,6 +39,7 @@ public class subSet {
     public static void main(String[] args) {
         int []nums = {1,2,3};
         new subSet().subsets(nums);
+
     }
 
 }

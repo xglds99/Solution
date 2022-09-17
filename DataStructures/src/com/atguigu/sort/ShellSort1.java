@@ -71,8 +71,6 @@ public class ShellSort1 {
 		}
 		
 		System.out.println("希尔排序1轮后=" + Arrays.toString(arr));//
-		
-		
 		// 希尔排序的第2轮排序
 		// 因为第2轮排序，是将10个数据分成了 5/2 = 2组
 		for (int i = 2; i < arr.length; i++) {
@@ -86,7 +84,6 @@ public class ShellSort1 {
 				}
 			}
 		}
-
 		System.out.println("希尔排序2轮后=" + Arrays.toString(arr));//
 
 		// 希尔排序的第3轮排序
@@ -102,7 +99,6 @@ public class ShellSort1 {
 				}
 			}
 		}
-
 		System.out.println("希尔排序3轮后=" + Arrays.toString(arr));//
 		*/
 	}
@@ -125,7 +121,6 @@ public class ShellSort1 {
 					//当退出while后，就给temp找到插入的位置
 					arr[j] = temp;
 				}
-
 			}
 		}
 	}
