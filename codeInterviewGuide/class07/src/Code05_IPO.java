@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
@@ -39,7 +38,9 @@ public class Code05_IPO {
 
 		PriorityQueue<Node> minCostQ = new PriorityQueue<>(new MinCostComparator());
 		PriorityQueue<Node> maxProfitQ = new PriorityQueue<>(new MaxProfitComparator());
-		minCostQ.addAll(Arrays.asList(nodes));
+		for (int i = 0; i < nodes.length; i++) {
+			minCostQ.add(nodes[i]);
+		}
 		for (int i = 0; i < k; i++) {
 			while (!minCostQ.isEmpty() && minCostQ.peek().c <= W) {
 				maxProfitQ.add(minCostQ.poll());

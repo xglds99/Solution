@@ -19,7 +19,7 @@ public class QuickSort {
      *     left -- 数组的左边界(例如，从起始位置开始排序，则l=0)
      *     right -- 数组的右边界(例如，排序截至到数组末尾，则r=a.length-1)
      */
-    public static void quickSort(int[] a, int left, int right) {
+    public static void quickSort_1(int[] a, int left, int right) {
 
         if (left < right) {
             int i,j,x;
@@ -43,21 +43,52 @@ public class QuickSort {
         }
     }
 
+
+
+ public static void quickSort(int[] nums, int start, int end){
+        if(start>end) return;
+        int i,j,base;
+        i=start;
+        j=end;
+        base=nums[start];
+        while (i<j){
+            while (i<j && nums[j]>=base) j--;
+            while (i<j && nums[i]<=base) i++;
+            if(i<j){
+                swap(nums,i,j);
+            }
+        }
+        swap(nums,start,i);
+     for (int num : nums) {
+         System.out.print(num + " ");
+     }
+     System.out.println();
+        quickSort(nums,start,j-1);
+        quickSort(nums,j+1,end);
+    }
+
+
+    public static void swap(int[] nums,int left,int right){
+        int temp=nums[left];
+        nums[left]=nums[right];
+        nums[right]=temp;
+    }
+
     public static void main(String[] args) {
         int i;
-        int[] a = {30,40,60,10,20,50};
+        int[] a = {30,30,40,60,20,10,50};
 
-        System.out.print("before sort:");
-        for (i=0; i<a.length; i++)
-            System.out.printf("%d ", a[i]);
-        System.out.print("\n");
+//        System.out.print("before sort:");
+//        for (i=0; i<a.length; i++)
+//            System.out.printf("%d ", a[i]);
+//        System.out.print("\n");
 
         quickSort(a, 0, a.length-1);
 
-        System.out.print("after  sort:");
-        for (i=0; i<a.length; i++)
-            System.out.printf("%d ", a[i]);
-        System.out.print("\n");
+//        System.out.print("after  sort:");
+//        for (i=0; i<a.length; i++)
+//            System.out.printf("%d ", a[i]);
+//        System.out.print("\n");
     }
 }
 
