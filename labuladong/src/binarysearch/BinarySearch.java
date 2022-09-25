@@ -1,6 +1,7 @@
 package binarysearch;
 
 import java.util.Arrays;
+import java.util.HashMap;
 
 public class BinarySearch {
 
@@ -11,6 +12,7 @@ public class BinarySearch {
      * @param target
      * @return
      */
+    HashMap<Integer,Integer> map = new HashMap<>();
     int binarySearch_1(int[] nums, int target) {
         int left = 0;
         int right = nums.length - 1; // зЂвт
