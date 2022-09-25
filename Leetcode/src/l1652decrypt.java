@@ -58,9 +58,24 @@ public class l1652decrypt {
 
     @Test
     public void test() {
-        int[] ans = decrypt(new int[]{2, 4, 9, 3}, -2);
-        for (int n : ans) {
-            System.out.println(n);
+
+        int []code = new int[]{2,4,9,3};
+        int n = 4;
+        int[] newCode = new int[n * 2];
+        System.arraycopy(code, 0, newCode, 0, n);
+        for (int num:
+             newCode) {
+            System.out.println(num);
         }
+        System.arraycopy(code, 0, newCode, n, n);
+        for (int num:
+                newCode) {
+            System.out.println(num);
+        }
+        code = newCode;
+        System.out.println(code.length);
+        System.out.println("********************");
+        int left = 0b11110000;
+        System.out.println(left);
     }
 }
