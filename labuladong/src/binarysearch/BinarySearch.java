@@ -2,6 +2,7 @@ package binarysearch;
 
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.TreeSet;
 
 public class BinarySearch {
 
@@ -28,6 +29,8 @@ public class BinarySearch {
         }
         return -1;
     }
+
+
 
     /**
      * Ñ°ÕÒ×ó²à±ß½ç
@@ -81,6 +84,5 @@ public class BinarySearch {
     }
 
     public static void main(String[] args) {
-        int i = Arrays.binarySearch(new int[]{1, 2, 3, 4, 5}, 5);
     }
 }

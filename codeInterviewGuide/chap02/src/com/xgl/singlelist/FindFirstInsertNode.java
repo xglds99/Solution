@@ -22,6 +22,11 @@ public class FindFirstInsertNode {
         return null;
     }
 
+    /**
+     * 获取第一个入环结点
+     * @param head
+     * @return
+     */
     public ListNode getLoopNode(ListNode head){
         if (head == null || head.next == null || head.next.next == null){
             return null;
@@ -44,6 +49,12 @@ public class FindFirstInsertNode {
             return slow;
     }
 
+    /**
+     * 无环获取第一个公共结点
+     * @param headA
+     * @param headB
+     * @return
+     */
     public ListNode noLoop(ListNode headA, ListNode headB){
         if (headA == null || headB == null){
             return null;

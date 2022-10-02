@@ -26,7 +26,6 @@ public class Code01_Hanoi {
             System.out.println("-------------------------");
             func(rest - 1, down - 1, help, from, to);
         }
-
     }
 
     public static void main(String[] args) {

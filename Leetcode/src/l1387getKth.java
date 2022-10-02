@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.HashMap;
 
 public class l1387getKth {
 
@@ -19,6 +20,22 @@ public class l1387getKth {
         return res[k - 1][1];
     }
 
+    public int getKth_1(int lo, int hi, int k) {
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for(int i = lo ; i <= hi ;i++){
+            map.put(i, get(i));
+        }
+        Integer [] nums = new Integer[hi - lo + 1];
+        for (int i = 0; i < hi - lo + 1; i++){
+            nums[i] = map.get(i + lo);
+        }
+        Arrays.sort(nums, (a,b) -> get(a).equals(get(b)) ? b - a : get(a) - get(b));
+        for(int s : nums){
+            System.out.println(s);
+        }
+
+        return 0;
+    }
 
     public Integer get(int x){
         int i = 0;

@@ -49,7 +49,9 @@ public class Code01_KMP {
 		String str = "abcabcababaccc";
 		String match = "ababa";
 		System.out.println(getIndexOf(str, match));
-
+		Integer a = new Integer(1);
+		Integer b = new Integer(1);
+		System.out.println(a == b);
 	}
 
 }

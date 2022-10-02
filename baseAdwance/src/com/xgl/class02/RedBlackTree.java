@@ -249,11 +249,11 @@ public class RedBlackTree extends AbstractSelfBalancingBinarySearchTree {
     }
     
     private boolean isBlack(Node node) {
-        return node != null ? ((RedBlackNode)node).color == ColorEnum.BLACK : false;
+        return node != null && ((RedBlackNode) node).color == ColorEnum.BLACK;
     }
     
     private boolean isRed(Node node) {
-        return node != null ? ((RedBlackNode)node).color == ColorEnum.RED : false;
+        return node != null && ((RedBlackNode) node).color == ColorEnum.RED;
     }
 
     /**

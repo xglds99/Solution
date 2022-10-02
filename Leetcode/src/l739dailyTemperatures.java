@@ -26,7 +26,7 @@ public class l739dailyTemperatures {
      */
     public int[] dailyTempretures1(int[] tempreatures) {
         Deque<Integer> deque = new LinkedList<>();
-        int answer[] = new int[tempreatures.length];
+        int[] answer = new int[tempreatures.length];
         for (int i = 0; i < tempreatures.length; i++) {
             if (deque.isEmpty() || tempreatures[deque.peek()] > tempreatures[i]) {
                 deque.push(i);

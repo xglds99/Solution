@@ -8,15 +8,15 @@ public class MergeSort {
 
 
     public static void main(String[] args) {
-        int nums[] = new int[]{8, 4, 5, 7, 1, 3, 6, 2};
-        int temp[] = new int[nums.length];
+        int[] nums = new int[]{8, 4, 5, 7, 1, 3, 6, 2};
+        int[] temp = new int[nums.length];
 
         mergeSortImpl(nums, 0, nums.length - 1, temp);
         System.out.println(Arrays.toString(nums));
     }
 
 
-    public static void mergeSortImpl(int nums[], int left, int right, int[] temp) {
+    public static void mergeSortImpl(int[] nums, int left, int right, int[] temp) {
         if (left < right) {
             int mid = (left + right) / 2;
             mergeSortImpl(nums, left, mid, temp);
@@ -32,7 +32,7 @@ public class MergeSort {
      * @param right
      * @param temp
      */
-    public static void merge(int nums[], int left, int mid, int right, int[] temp) {
+    public static void merge(int[] nums, int left, int mid, int right, int[] temp) {
         int i = left; // 初始化i, 左边有序序列的初始索引
         int j = mid + 1; //初始化j, 右边有序序列的初始索引
         int t = 0; // 指向temp数组的当前索引

@@ -17,8 +17,8 @@ public class l2100goodDaysToRobBank {
     }
 
     public List<Integer> goodDaysToRobBank(int [] security,int time){
-        Boolean flag1=true;
-        Boolean flag2=true;
+        boolean flag1=true;
+        boolean flag2=true;
         List<Integer> resu=new ArrayList<>();
         if(time== 1 || time> security.length)
             return resu;
@@ -27,13 +27,15 @@ public class l2100goodDaysToRobBank {
             flag2=true;
             if((i-time)>=0 && (i+time)<security.length){  //满足前后各有time天
                 for(int j=i-time;j<i;j++){
-                    if((security[j]-security[j+1])<0){
-                        flag1=false;
+                    if ((security[j] - security[j + 1]) < 0) {
+                        flag1 = false;
+                        break;
                     }
                 }
                 for (int k=i;k<i+time;k++){
-                    if((security[k]-security[k+1])>0){
-                        flag2=false;
+                    if ((security[k] - security[k + 1]) > 0) {
+                        flag2 = false;
+                        break;
                     }
                 }
             if(flag1 && flag2){

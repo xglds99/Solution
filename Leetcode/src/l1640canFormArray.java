@@ -46,7 +46,7 @@ public class l1640canFormArray {
         return true;
     }
 
-    int findIdx(int a, int pieces[][]) {
+    int findIdx(int a, int[][] pieces) {
         for (int i = 0; i < pieces.length; i++) {
             if (a == pieces[i][0]) {
                 return i;
