@@ -55,7 +55,9 @@ public class Code02_RandomPool {
 		System.out.println(pool.getRandom());
 		System.out.println(pool.getRandom());
 		System.out.println(pool.getRandom());
-
+		for (int i = 0; i < 1000; i++) {
+			System.out.println((int)(Math.random() * 1));
+		}
 	}
 
 }

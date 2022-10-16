@@ -22,19 +22,19 @@ public class QuickSort {
 
         if (left < right) {
             int i, j, x;
-
             i = left;
             j = right;
             x = a[i];
             while (i < j) {
                 while (i < j && a[j] > x)
-                    j--; // 从右向左找第一个小于x的数
+                    j--; // 从右向左找第一个小于等于x的数
                 if (i < j)
                     a[i++] = a[j];
                 while (i < j && a[i] < x)
-                    i++; // 从左向右找第一个大于x的数
+                    i++; // 从左向右找第一个大于等于x的数
                 if (i < j)
                     a[j--] = a[i];
+
             }
             a[i] = x;
             quickSort(a, left, i - 1); /* 递归调用 */
@@ -50,8 +50,8 @@ public class QuickSort {
         j = end;
         base = nums[start];
         while (i < j) {
-            while (i < j && nums[j] >= base) j--;
-            while (i < j && nums[i] <= base) i++;
+            while (i < j && nums[j] >= base) j--;//一次排序把大于 base的数放在右边
+            while (i < j && nums[i] <= base) i++; //一次排序把小于base的数放在左边
             if (i < j) {
                 swap(nums, i, j);
             }
@@ -74,19 +74,49 @@ public class QuickSort {
 
     public static void main(String[] args) {
         int i;
-        int[] a = {30, 30, 40, 60, 20, 10, 50};
+        int[] a = { 30, 40, 60, 20, 10, 50,30};
 
 //        System.out.print("before sort:");
 //        for (i=0; i<a.length; i++)
 //            System.out.printf("%d ", a[i]);
 //        System.out.print("\n");
 
-        quickSort(a, 0, a.length - 1);
+        quickSort_1(a, 0, a.length - 1);
 
 //        System.out.print("after  sort:");
 //        for (i=0; i<a.length; i++)
 //            System.out.printf("%d ", a[i]);
 //        System.out.print("\n");
+    }
+
+    @Test
+    public void test(){
+        int []arr = new int[]{3,5,6,3,4,5,2,6,9,0};
+        int p1 = 0;
+        int p0 = 0;
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i] == 5){
+                swap(arr, p1, i);
+                p1++;
+            }else if(arr[i] < 5){
+                swap(arr, p0, i);
+                if(p0 < p1){
+                    swap(arr, p1, i);
+                }
+                p1++;
+                p0++;
+            }
+        }
+        for (int i : arr) {
+            System.out.print(i + " ");
+        }
+    }
+
+    public static void printArray(int []nums){
+        for(int x : nums){
+            System.out.print(x  + "  ");
+        }
+        System.out.println();
     }
 }
 

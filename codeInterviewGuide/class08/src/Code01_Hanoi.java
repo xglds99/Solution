@@ -23,7 +23,6 @@ public class Code01_Hanoi {
         } else {
             func(rest - 1, down - 1, from, to, help);
             func(1, down, from, help, to);
-            System.out.println("-------------------------");
             func(rest - 1, down - 1, help, from, to);
         }
     }

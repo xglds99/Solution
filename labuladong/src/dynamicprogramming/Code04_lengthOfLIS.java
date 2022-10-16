@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 
 public class Code04_lengthOfLIS {
-
+//最长递增子序列
     public  int lengthOfLIS(int []nums){
         int []dp = new int[nums.length];
         Arrays.fill(dp, 1);

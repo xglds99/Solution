@@ -1,22 +1,27 @@
 import org.junit.Test;
 
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.TreeSet;
 
 public class l239maxSlidingWindow {
-
+//1,3,-1,-3,5,3,6,7], k = 3
     public int[] maxSlidingWindow(int[] nums, int k) {
         int n = nums.length;
         int[] res = new int[n - k + 1];
-        int index = 0;
-        TreeSet<Integer> set = new TreeSet<>();
-        for (int i = 0; i < k; i++) {
-            set.add(nums[i]);
-        }
-        res[index++] = set.last();
-        for (int i = k; i < n; i++) {
-            set.add(nums[i]);
-            set.remove(nums[i - k]);
-            res[index++] = set.last();
+        LinkedList<Integer> queue = new LinkedList<>();
+        for(int i = 0,j = 0; i < n; i++){
+            while(!queue.isEmpty() && nums[queue.peekLast()] <= nums[i])
+            {
+                queue.pollLast();
+            }
+            queue.addLast(i);
+            if(queue.peekFirst() <= i - k){
+                queue.pollFirst();
+            }
+            if(i + 1>= k){
+                res[i+1-k] = nums[queue.peekFirst()];
+            }
         }
         return res;
     }
