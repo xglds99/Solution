@@ -4,6 +4,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class combinationSum {
+    StringBuilder sb = new StringBuilder();
+    StringBuffer sf = new StringBuffer();
     List<List<Integer>> resu = new LinkedList<>();
     LinkedList<Integer> track = new LinkedList<>();
     int trackSum = 0;

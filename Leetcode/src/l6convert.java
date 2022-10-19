@@ -8,9 +8,14 @@ public class l6convert {
 
     public static void main(String[] args) {
     String s="PAYPALISHIRING";
-        String s1 = new l6convert().convert(s, 3);
-        System.out.println(s1);
-
+//        String s1 = new l6convert().convert(s, 3);
+//        System.out.println(s1);
+        char []cnt = new char[10];
+        for (int i = 0; i < 5; i++) {
+            cnt[i] = (char) ('a' + i);
+        }
+        System.out.println(new String(cnt));
+        System.out.println((int) Math.pow(2, 29));
     }
 
     public  String convert(String s,int nums){

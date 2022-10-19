@@ -1,9 +1,17 @@
 package unionfind;
 
 public class UnionFind {
-
+    /**
+     * count 记录当前图的联通分量个数
+     */
     int count;
+    /**
+     * i的根节点就是parent[i]
+     */
     int[] parent;
+    /**
+     * 记录每个根节点中结点个数
+     */
     int[] rank;
 
     public UnionFind(char[][] grid) {
@@ -77,8 +85,37 @@ public class UnionFind {
                 }
             }
         }
-
         return uf.getCount();
     }
 
+
+}
+
+class UF {
+    int count;
+    int[] parent;
+
+    public UF(int n) {
+        count = 0;
+        parent = new int[n];
+        for (int i = 0; i < n; i++) {
+            parent[i] = i;
+        }
+    }
+
+    public int find(int x) {
+        if (parent[x] != x) {
+            parent[x] = find(parent[x]);
+        }
+        return parent[x];
+    }
+
+    public void union(int x, int y) {
+        int rootx = find(x);
+        int rooty = find(y);
+        if (rootx != rooty) {
+            parent[rooty] = rootx;
+            count--;
+        }
+    }
 }
