@@ -8,6 +8,7 @@ public class PolandNotation {
 
 
     public static void main(String[] args) {
+        Integer a = 100;
         String suffixExpression = " 2-1 + 2 ";
         String expression = "61*(5-2+6)/3+2";
         System.out.println("ÖÐ×ºÊ½£º  "+suffixExpression);

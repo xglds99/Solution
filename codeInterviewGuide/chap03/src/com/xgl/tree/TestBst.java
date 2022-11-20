@@ -25,7 +25,7 @@ public class TestBst {
 
     /**
      * 判断是否是二叉搜索树
-     * 中序遍历，若遍历序列不是递增的则不事搜索二叉树
+     * 中序遍历，若遍历序列不是递增的则不是搜索二叉树
      *
      * @param head
      * @return
@@ -55,7 +55,6 @@ public class TestBst {
                 if (head != null) {
                     deque.push(head);
                     head = head.getLeft();
-
                 } else {
                     head = deque.pop();
                     if (head.getValue() < preValue) {

@@ -5,6 +5,39 @@ import java.util.Arrays;
 import java.util.Date;
 
 public class MergeSort {
+    
+    public void merge(int []nums, int r, int l){
+        if (l==r)return;
+        int mid = (l + r) >> 1;
+        merge(nums, l, mid);
+        merge(nums, mid + 1, r);
+        mergeSort(nums, l, r, mid);
+    }
+    
+    public void mergeSort(int []nums,int left, int right, int mid){
+        int []temp = new int[right - left + 1];
+        int l = left;
+        int r = mid + 1;
+        int index = 0;
+        while(l <= mid && r <= right){
+            if(nums[l] <= nums[r]){
+                temp[index++] = nums[l];
+                l++;
+            }else {
+                temp[index++] = nums[r];
+                r++;
+            }
+            while(l <= mid){
+                temp[index++] = nums[l++];
+            }
+            while(r <= right){
+                temp[index++] = nums[r++];
+            }
+            if (index >= 0) System.arraycopy(temp, 0, nums, left, index);
+        }
+        
+    }
+        
 
 
     public static void main(String[] args) {

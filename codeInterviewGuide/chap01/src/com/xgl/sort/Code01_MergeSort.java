@@ -12,7 +12,7 @@ public class Code01_MergeSort {
     }
 
     public static void mergeSort(int[] arr, int left, int right) {
-        if (left == right)
+        if (left >= right)
             return;
         int mid = left + ((right - left) >> 1);
         mergeSort(arr, left, mid);

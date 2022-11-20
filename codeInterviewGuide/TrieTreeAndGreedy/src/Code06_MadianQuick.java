@@ -1,12 +1,13 @@
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.PriorityQueue;
+import java.util.*;
 
 public class Code06_MadianQuick {
 
 	public static class MedianHolder {
 		private PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>(new MaxHeapComparator());
 		private PriorityQueue<Integer> minHeap = new PriorityQueue<Integer>(new MinHeapComparator());
+		HashSet<Integer> set;
+		LinkedHashMap<Integer,Integer> linkedHashMap;
+		TreeMap<Integer, String> treeMap;
 
 		private void modifyTwoHeapsSize() {
 			if (this.maxHeap.size() == this.minHeap.size() + 2) {
