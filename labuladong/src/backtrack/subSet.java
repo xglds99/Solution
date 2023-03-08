@@ -16,6 +16,12 @@ public class subSet {
     }
 
     // 回溯算法核心函数，遍历子集问题的回溯树
+
+    /**
+     * 题目给你输入一个无重复元素的数组 nums，其中每个元素最多使用一次，请你返回 nums 的所有子集。
+     * @param nums
+     * @param start
+     */
     void backtrack(int[] nums, int start) {
 
         // 前序位置，每个节点的值都是一个子集

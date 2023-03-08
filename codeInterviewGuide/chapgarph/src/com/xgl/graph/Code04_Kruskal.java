@@ -76,7 +76,7 @@ public class Code04_Kruskal {
 		Set<Edge> result = new HashSet<>();
 		while (!priorityQueue.isEmpty()) {
 			Edge edge = priorityQueue.poll();
-			//怎样判断是否有环呢？
+			//怎样判断是否有环呢？使用并查集
 			if (!unionFind.isSameSet(edge.from, edge.to)) {
 				result.add(edge);
 				unionFind.union(edge.from, edge.to);

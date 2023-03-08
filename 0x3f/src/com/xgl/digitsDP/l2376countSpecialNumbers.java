@@ -6,8 +6,8 @@ import java.util.Arrays;
 
 public class l2376countSpecialNumbers {
 
-    char s[];
-    int dp[][];
+    char[] s;
+    int[][] dp;
 
     /**
      * 如果一个正整数每一个数位都是 互不相同的，我们称它是 特殊整数 。

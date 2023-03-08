@@ -1,7 +1,6 @@
 package com.xgl.graph;
 
-import java.util.HashMap;
-import java.util.HashSet;
+import java.util.*;
 import java.util.Map.Entry;
 
 // no negative weight
@@ -152,7 +151,9 @@ public class Code06_Dijkstra {
      * 算法思想：把顶点分为两个集合，分为已求出最短路径的顶点集合S，初始时S只有一个起始原点，以后每求出一个最短路径v--->u,就将u加入到集合S中
      * 直到所有顶点被加入到集合S中，另一个集合U为未确定最短路径的点，在代码中用一个bool数组即可表示是否被计算出最短路径
      * 在向S中添加顶点，总保持从原点v到S中各顶点的最短路径长度不大于从原点v到U中任何顶点的最短路径长度。
+     * 也就是说每次从集合U中选择点的时候，选择距离源点v路径最小的那个点，然后以点u为新的中间节点，更新集合U中的最短路径。
      * eg.若刚向S中添加的是顶点u，对于U中每个顶点j，若u-->j有边且权值为Wuj，原来从顶点v到j的路径长度Cvj 大于从顶点v到顶点u的长度与Wuj之和，更新顶点j的最短路径。
+     *
      * @param graph 邻接矩阵
      * @param v     起始原点
      * @return
@@ -196,4 +197,28 @@ public class Code06_Dijkstra {
         return dist;
     }
 
+    // Dijkstra 算法模板，堆优化版 堆优化了每次找离起点最近的点的时间复杂度。
+    // 返回从 start 到每个点的最短路
+    //将图转换成邻接表来优化对于每一个中间结点u，更新其临边的时间。
+    private int[] dijkstra(List<int[]>[] g, int start) {
+        var dist = new int[g.length];
+        Arrays.fill(dist, Integer.MAX_VALUE);
+        dist[start] = 0;
+        var pq = new PriorityQueue<int[]>(Comparator.comparingInt(a -> a[1]));
+        pq.offer(new int[]{start, 0});
+        while (!pq.isEmpty()) {
+            var p = pq.poll();
+            int x = p[0], d = p[1];
+            if (d > dist[x]) continue;
+            for (var e : g[x]) {
+                int y = e[0];
+                int newDist = d + e[1];
+                if (newDist < dist[y]) {
+                    dist[y] = newDist;
+                    pq.offer(new int[]{y, newDist});
+                }
+            }
+        }
+        return dist;
+    }
 }

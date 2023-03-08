@@ -1,10 +1,13 @@
 package com.atguigu.tree;
 
 
+import java.util.ArrayList;
+import java.util.List;
 
 public class arrBinaryTreeDemo {
     public static void main(String[] args) {
         int []arr=new int[]{1,2,3,4,5,6,7};
+        List<Integer> list = new ArrayList<Integer>();
         arrBinaryTress arrBinaryTress=new arrBinaryTress(arr);
         arrBinaryTress.preOrder(0);
     }
