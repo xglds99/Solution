@@ -14,9 +14,7 @@ public class Code06_01knapsack {
                             dp[i - 1][j - wt[i]] + val[i - 1]); //选择放进去第i个物品
                 }
             }
-
         }
         return dp[N][W];
     }
-
 }

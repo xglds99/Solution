@@ -26,6 +26,7 @@ public class subSet {
 
         // 前序位置，每个节点的值都是一个子集
         res.add(new LinkedList<>(track));
+        System.out.println(track);
 
         // 回溯算法标准框架
         for (int i = start; i < nums.length; i++) {
@@ -45,6 +46,7 @@ public class subSet {
     public static void main(String[] args) {
         int []nums = {1,2,3};
         new subSet().subsets(nums);
+
 
     }
 
