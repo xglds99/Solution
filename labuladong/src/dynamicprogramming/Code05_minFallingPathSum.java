@@ -27,7 +27,7 @@ public class Code05_minFallingPathSum {
      * @param j
      * @return
      */
-    int memo[][];
+    int[][] memo;
     private int dp(int[][] matrix, int i, int j) {
         if (i < 0 || j < 0 || i >= matrix.length || j >= matrix.length){
             return 6666;

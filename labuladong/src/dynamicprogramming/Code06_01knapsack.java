@@ -1,7 +1,13 @@
 package dynamicprogramming;
 
 public class Code06_01knapsack {
-
+    /**
+    * @Author xgl
+    * @Description 
+    * @Date 11:15 2023/4/7
+    * @Param [W, N, wt, val]
+    * @return int
+    **/
     int knapsack(int W, int N, int[] wt, int[] val) {
         int[][] dp = new int[N + 1][W + 1];
         for (int i = 1; i < N + 1; i++) {

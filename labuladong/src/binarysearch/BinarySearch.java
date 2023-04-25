@@ -87,5 +87,23 @@ public class BinarySearch {
     }
 
     public static void main(String[] args) {
+        int []arr = new int[]{1,2,3,3,4,8,9,11,15,58};
+        int i = new BinarySearch().binarySearchLeftMax(arr, 57);
+        System.out.println(i);
+    }
+
+    public int binarySearchLeftMax(int []arr, int target){
+        int left = 0;
+        int right = arr.length - 1;
+        int mid;
+        while(left < right){
+             mid = (left + right) / 2;
+             if(arr[mid] <= target){
+                 left = mid + 1;
+             }else{
+                 right = mid;
+             }
+        }
+        return right;
     }
 }

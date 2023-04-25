@@ -118,7 +118,6 @@ public class Code01_MergeSort {
         printArray(arr);
         mergeSort(arr);
         printArray(arr);
-
     }
 
 }
