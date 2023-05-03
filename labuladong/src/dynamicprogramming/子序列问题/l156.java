@@ -7,13 +7,12 @@ package dynamicprogramming.子序列问题;
 public class l156 {
 
     /**
-     *
+     * @return int
      * @Author xgl
      * @Description 给你一个字符串 s ，找出其中最长的回文子序列，并返回该序列的长度
      * 子序列定义为：不改变剩余字符顺序的情况下，删除某些字符或者不删除任何字符形成的一个序列。
      * @Date 19:17 2023/4/25
      * @Param
-     * @return int
      **/
     public int longestPalindromeSubseq(String s) {
         int n = s.length();
@@ -24,16 +23,12 @@ public class l156 {
         for (int i = 1; i <= n; i++) {
             dp[i][i] = 1;
         }
-
         //3.明确状态i，，j的改变，引起状态的改变。
         //4.明确状态转移方程  if s[i] == s[j] dp[i][j] = dp[i + 1][j - 1] + 2 表示这两个可以选
         //if s[i] != s[j] dp[i][j] = max(dp[i + 1][j], dp[i][j - 1]) 表示不选s[i]或者s[j]
         //但是因为i的状态由 i + 1的状态转移而来，所以i要倒序遍历
-
         for (int i = n; i > 0; i--) {
-
             for (int j = i + 1; j <= n; j++) {
-
                 if (chars[i - 1] == chars[j - 1]) {
                     dp[i][j] = dp[i + 1][j - 1] + 2;
                 } else {
@@ -41,7 +36,6 @@ public class l156 {
                 }
             }
         }
-
         return dp[1][n];
     }
 }
