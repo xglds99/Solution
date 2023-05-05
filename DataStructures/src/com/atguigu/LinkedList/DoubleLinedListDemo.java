@@ -19,7 +19,7 @@ public class DoubleLinedListDemo {
 }
 
 class DoubleLinkedList {
-    private HeroNode2 head = new HeroNode2(1, null, null);
+    private final HeroNode2 head = new HeroNode2(1, null, null);
 
     public void addHeroNode(HeroNode2 heroNode) {
         HeroNode2 temp = head;

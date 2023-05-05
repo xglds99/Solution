@@ -2,7 +2,7 @@ package com.atguigu.operator;
 
 public class yihuo {
     public static void main(String[] args) {
-        findDouble(new int[]{1, 2, 3, 4, 5, 5});
+        findDouble(new int[]{1, 1, 2, 4, 4});
         int a = 3;
         int b = 20;
         a = a ^ b;
@@ -12,9 +12,9 @@ public class yihuo {
     }
 
     public static void findDouble(int[] nums) {
-        int resu = 0;
-        for (int i : nums) {
-            resu = i ^ i;
+        int resu = nums[0];
+        for (int i = 1; i < nums.length; i++) {
+            resu ^= nums[i];
         }
         System.out.println(resu);
     }
