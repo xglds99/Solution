@@ -7,15 +7,11 @@ import java.util.Queue;
 public class l6convert {
 
     public static void main(String[] args) {
-    String s="PAYPALISHIRING";
-//        String s1 = new l6convert().convert(s, 3);
-//        System.out.println(s1);
-        char []cnt = new char[10];
-        for (int i = 0; i < 5; i++) {
-            cnt[i] = (char) ('a' + i);
-        }
-        System.out.println(new String(cnt));
-        System.out.println((int) Math.pow(2, 29));
+
+        System.out.println(4 / 333);
+        long a = 4;
+        long b = 333;
+        System.out.println(a % b);
     }
 
     public  String convert(String s,int nums){
@@ -24,11 +20,11 @@ public class l6convert {
         for (int i = 0; i < chars.length; i++) {
             sbf[(i+1)%nums].append(chars[i]);
         }
-        String resu="";
+        StringBuilder resu= new StringBuilder();
         for(int j=0;j<nums;j++){
-            resu+=sbf[j];
+            resu.append(sbf[j]);
         }
-        return resu;
+        return resu.toString();
     }
 
 
