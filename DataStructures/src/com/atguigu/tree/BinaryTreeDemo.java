@@ -169,18 +169,18 @@ class BinaryTree {
      */
     public void levelOrder() {
 
-        if(this.root == null){
+        if (this.root == null) {
             return;
         }
-        Queue<HeroNode> queue =new LinkedList<>();
+        Queue<HeroNode> queue = new LinkedList<>();
         queue.add(root);
-        while (!queue.isEmpty()){
+        while (!queue.isEmpty()) {
             HeroNode cur = queue.poll();
             System.out.println(cur);
-            if (cur.getLeft() != null){
+            if (cur.getLeft() != null) {
                 queue.add(cur.getLeft());
             }
-            if (cur.getRight() != null){
+            if (cur.getRight() != null) {
                 queue.add(cur.getRight());
             }
         }

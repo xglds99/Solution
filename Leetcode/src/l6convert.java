@@ -1,4 +1,5 @@
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -6,12 +7,18 @@ import java.util.Queue;
 
 public class l6convert {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
-        System.out.println(4 / 333);
-        long a = 4;
-        long b = 333;
-        System.out.println(a % b);
+        byte [] buffer = new byte[60000];
+        File file = new File("G:\\Solution\\Leetcode\\src\\pandas.jpg");
+        System.out.println(System.getProperty("user.dir"));
+        FileInputStream fileInputStream = new FileInputStream(file);
+        int i = fileInputStream.read(buffer,0, 60000);
+        byte []copy = new byte[60000];
+        System.out.println(i);
+        System.arraycopy(buffer, 0, copy, 0, i);
+        FileOutputStream outputStream = new FileOutputStream("./copy.jpg");
+        outputStream.write(copy,0,i);
     }
 
     public  String convert(String s,int nums){

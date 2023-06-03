@@ -1,8 +1,6 @@
 package binarysearch;
 
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.TreeSet;
 
 public class BinarySearch {
 
@@ -13,7 +11,8 @@ public class BinarySearch {
      * @param target
      * @return
      */
-    HashMap<Integer,Integer> map = new HashMap<>();
+    HashMap<Integer, Integer> map = new HashMap<>();
+
     int binarySearch_1(int[] nums, int target) {
         int left = 0;
         int right = nums.length - 1; // 注意
@@ -31,10 +30,13 @@ public class BinarySearch {
     }
 
 
-
     /**
      * 寻找左侧边界
-     *
+     *找第一个>=x的数
+     * 可以转换求 >x, <= x, < x
+     * >x ===> 求 >=(x + 1)
+     * < x ===> 求 >=(x) -1
+     * <=x === > 求 >x -1 ==> >=(x + 1) -1
      * @param nums
      * @param target
      * @return
@@ -73,11 +75,11 @@ public class BinarySearch {
             int mid = left + (right - left) / 2;
             if (nums[mid] < target) {
                 left = mid + 1;
-            } else if (nums[mid] > target) {
-                right = mid - 1;
             } else if (nums[mid] == target) {
                 // 这里改成收缩左侧边界即可
                 left = mid + 1;
+            } else if (nums[mid] > target) {
+                right = mid - 1;
             }
         }
         // 这里改为检查 right 越界的情况，见下图
@@ -86,23 +88,61 @@ public class BinarySearch {
         return right;
     }
 
+
+    /**
+     * @return int
+     * @Author xgl
+     * @Description 寻找左侧第一个出现的元素，左侧边界，
+     * 左闭右开区间[ left, right);
+     * @Date 10:33 2023/6/2
+     * @Param [nums, target]
+     **/
+    public int left_bound_1(int[] nums, int target) {
+        int left = 0;
+        int right = nums.length;
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+            if (nums[mid] < target) {
+                left = mid + 1;
+            } else {
+                right = mid;
+            }
+        }
+        return left;
+    }
+
+    public int right_bound_2(int[] nums, int target){
+        int left = 0;
+        int right = nums.length;
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+            if (nums[mid] > target){
+                right = mid - 1;
+            }else{
+                left = mid;
+            }
+        }
+        return right;
+    }
+
+
     public static void main(String[] args) {
-        int []arr = new int[]{1,2,3,3,4,8,9,11,15,58};
+        int[] arr = new int[]{1, 2, 3, 3, 4, 8, 9, 11, 15, 58};
         int i = new BinarySearch().binarySearchLeftMax(arr, 57);
         System.out.println(i);
     }
 
-    public int binarySearchLeftMax(int []arr, int target){
+    public int binarySearchLeftMax(int[] arr, int target) {
         int left = 0;
         int right = arr.length - 1;
         int mid;
-        while(left < right){
-             mid = (left + right) / 2;
-             if(arr[mid] <= target){
-                 left = mid + 1;
-             }else{
-                 right = mid;
-             }
+        while (left < right) {
+            mid = (left + right) / 2;
+            if (arr[mid] <= target) {
+                left = mid + 1;
+            } else {
+                right = mid;
+            }
         }
         return right;
     }
