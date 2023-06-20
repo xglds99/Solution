@@ -1,4 +1,4 @@
-package dynamicprogramming.çº¿æ€§DP;
+package dynamicprogramming.ÏßĞÔDP;
 
 import java.util.HashSet;
 import java.util.List;
@@ -10,7 +10,7 @@ public class l139 {
         set = new HashSet<>();
         set.addAll(wordDict);
         int n = s.length();
-        boolean []dp = new boolean[n + 10]; //dp[i]ï¼Œå‰iä¸ªå­—ç¬¦ä¸²æ˜¯å¦å¯ä»¥ç”±å­—å…¸ä¸­çš„å•è¯æ‹¼æ¥
+        boolean []dp = new boolean[n + 10]; //dp[i]£¬Ç°i¸ö×Ö·û´®ÊÇ·ñ¿ÉÒÔÓÉ×ÖµäÖĞµÄµ¥´ÊÆ´½Ó
         dp[0] = true;
         for (int i = 1; i <= n; i++){
             for (int j = 1; j <= i; j++) {

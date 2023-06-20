@@ -1,4 +1,4 @@
-package dynamicprogramming.子串问题;
+package dynamicprogramming.subStr;
 
 /**
  * @author xgl
@@ -7,7 +7,7 @@ package dynamicprogramming.子串问题;
 public class l5 {
     /**
     * @Author xgl
-    * @Description
+    * @Description 寻找字串中最长回文字串
     * @Date 20:02 2023/4/25
     * @Param [s]
     * @return java.lang.String
@@ -100,5 +100,6 @@ public class l5 {
 
     public static void main(String[] args) {
         System.out.println(l5.Manacher("123456654321dsadasdasi9uhf8923h89fewfgjisjhiu9dhguasasasasasasasasasasasasasasasasasa"));
+        System.out.println(false);
     }
 }

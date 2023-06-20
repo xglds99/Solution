@@ -1,4 +1,4 @@
-package dynamicprogramming.子串问题;
+package dynamicprogramming.subStr;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
