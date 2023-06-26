@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class Code02_LowestLexicography {
+ class Code02_LowestLexicography_1 {
 
 	public static class MyComparator implements Comparator<String> {
 		@Override

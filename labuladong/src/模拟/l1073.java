@@ -12,7 +12,7 @@ public class l1073 {
     public int[] addNegabinary(int[] arr1, int[] arr2) {
         int i = arr1.length - 1, j = arr2.length - 1;
         int carry = 0;
-        List<Integer> ans = new ArrayList<Integer>();
+        List<Integer> ans = new ArrayList<>();
         while (i >= 0 || j >= 0 || carry != 0) {
             int x = carry;
             if (i >= 0) {

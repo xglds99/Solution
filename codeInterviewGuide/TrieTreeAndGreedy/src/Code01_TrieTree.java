@@ -1,6 +1,6 @@
 
 
-public class Code01_TrieTree {
+class Code01_TrieTree_1 {
 
 	/**
 	 * 前缀树可以很方便找到以 “xx”开头的字符串有几个

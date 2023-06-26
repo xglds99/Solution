@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class Code04_BestArrange {
+class Code04_BestArrange1{
 
 	public static class Program {
 		public int start;

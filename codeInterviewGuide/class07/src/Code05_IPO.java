@@ -1,7 +1,7 @@
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
-public class Code05_IPO {
+ class Code05_IPO1 {
 	public static class Node {
 		public int p;
 		public int c;
