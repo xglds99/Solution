@@ -35,6 +35,7 @@ public class allsubstring {
             if (f[i]) cnt += (i * i);
         }
 
+
         return cnt;
     }
 
