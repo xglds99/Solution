@@ -19,8 +19,8 @@ public class l410 {
         }
         Arrays.fill(dp[n], Integer.MAX_VALUE);
         dp[0][0] = 0;
-        for (int i = 1; i <= n; i++) {
-            for (int j = 1; j <= Math.min(i, m); j++) {
+        for (int i = 1; i <= n ; i++) {
+            for (int j = 1; j <= Math.min(i,m) ; j++) {
                 for (int k = 0; k < i; k++) {
                     dp[i][j] = Math.min(dp[i][j], Math.max(dp[k][j - 1], prefixSum[i] - prefixSum[k]));
                 }

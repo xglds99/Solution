@@ -20,11 +20,6 @@ public class l115 {
         if (m < n) {
             return 0;
         }
-        /**
-        * @Author xgl
-        * @Description
-
-        **/
         int[][] dp = new int[m + 1][n + 1];
         for (int i = 0; i <= m; i++) {
             dp[i][n] = 1;
