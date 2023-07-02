@@ -1,12 +1,4 @@
-import java.util.List;
 
-/**
- * @ClassName l2
- * @Description TODO
- * @Author xgl
- * @Date 2023/7/2 10:29
- * @Version 1.0
- */
 public class l2 {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         int carry = 0;
@@ -24,7 +16,7 @@ public class l2 {
             }
             ListNode cur = new ListNode(k % 10);
             carry = k / 10;
-            tail.next = tail;
+            tail.next = cur;
             tail = tail.next;
         }
         return dummy.next;
