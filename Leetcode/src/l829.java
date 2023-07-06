@@ -6,4 +6,7 @@
  * @Version 1.0
  */
 public class l829 {
+    public int consecutiveNumbersSum(int n) {
+        return 0;
+    }
 }
