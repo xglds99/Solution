@@ -139,8 +139,8 @@ class BinaryTree {
 
     //后序遍历非递归写法
     public void postOrder_1() {
-        HeroNode p, r = new HeroNode();
-        boolean flag = false;
+        HeroNode p, r;
+        boolean flag;
         Deque<HeroNode> st = new LinkedList<>();
         p = root;
         do {
