@@ -27,7 +27,7 @@ public class Code07_allKnapSack {
 //public class test {
 //
 //    public static void main(String[] args) {
-//        // TODO 自动生成的方法存根
+//
 //        int[] w= {2,5,4,2,3};
 //        int[] v= {6,3,5,4,6};
 //        System.out.println(bagkiller(w,v,10));
