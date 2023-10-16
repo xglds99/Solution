@@ -16,23 +16,23 @@ public class l2434 {
      * @Date 20:45 2023/6/26
      * @Param [s]
      **/
-    public String robotWithString(String s) {
-        int[] min = new int[s.length()];
-        for (int i = s.length() - 1; i > 0; i--) {
-            min[i - 1] = Math.min(s.charAt(i), i < s.length() - 1 ? min[i] : 'z');
-        }
-        StringBuilder sb = new StringBuilder();
-        ArrayDeque<Character> deque = new ArrayDeque<>();
-        for (int i = 0; i < s.length(); i++) {
-            for (deque.push(s.charAt(i)); !deque.isEmpty() && deque.peek() <= min[i]; ) {
-                sb.append(deque.pop());
-            }
-        }
-        while (!deque.isEmpty()) {
-            sb.append(deque.pop());
-        }
-        return sb.toString();
-    }
+//    public String robotWithString(String s) {
+//        int[] min = new int[s.length()];
+//        for (int i = s.length() - 1; i > 0; i--) {
+//            min[i - 1] = Math.min(s.charAt(i), i < s.length() - 1 ? min[i] : 'z');
+//        }
+//        StringBuilder sb = new StringBuilder();
+//        ArrayDeque<Character> deque = new ArrayDeque<>();
+//        for (int i = 0; i < s.length(); i++) {
+//            for (deque.push(s.charAt(i)); !deque.isEmpty() && deque.peek() <= min[i]; ) {
+//                sb.append(deque.pop());
+//            }
+//        }
+//        while (!deque.isEmpty()) {
+//            sb.append(deque.pop());
+//        }
+//        return sb.toString();
+//    }
 
     class Solution {
         /**

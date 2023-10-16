@@ -1,7 +1,7 @@
 package com.xgl.graph;
 
 public class Code07_Floyd {
-    void Floyd(int[][] graph) {
+    int [][] Floyd(int[][] graph) {
         int INF = Integer.MAX_VALUE / 2;
         int[][] A = new int[INF][INF];
         int[][] path = new int[INF][INF];
@@ -26,5 +26,6 @@ public class Code07_Floyd {
                 }
             }
         }
+        return A;
     }
 }

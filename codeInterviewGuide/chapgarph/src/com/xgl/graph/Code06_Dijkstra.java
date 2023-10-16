@@ -163,7 +163,7 @@ public class Code06_Dijkstra {
         int n = graph.length;
         int[] dist = new int[n]; //记录x到每个点的最短路径
         int[] path = new int[n];
-        int[] S = new int[n];//记录这个点是否已经被计算出最短路径。
+        int[] S = new int[n];//记录这个点是否已经被计算出最短路径。0表示为计算，1表示计算
         for (int i = 0; i < n; i++) {
             dist[i] = graph[v][i];
             S[i] = 0;

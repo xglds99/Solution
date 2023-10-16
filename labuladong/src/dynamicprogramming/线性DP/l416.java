@@ -12,7 +12,6 @@ public class l416 {
         for (int i = 0; i < n + 1; i++) {
             dp[i][0] = true;
         }
-
         for (int i = 1; i <= n; i++) {
             for (int j = 0; j <= sum ; j++) {
                 if (j < nums[i - 1]){

@@ -15,28 +15,15 @@ public class l2370 {
     public int longestIdealString(String s, int k) {
         int n = s.length();
         char[] cs = s.toCharArray();
-        int []dp = new int[n + 10];
-        int res = 0;
-        Arrays.fill(dp,1);
-        HashMap<Character, ArrayList<Integer>> map = new HashMap<>();
-        for (int i = 1; i <= n ; i++) {
-            for (var entry: map.entrySet()) {
-                if (Math.abs(cs[i - 1] - entry.getKey()) <= k){
-                    ArrayList<Integer> cur = entry.getValue();
-                    for (int id: cur){
-                        dp[i] = Math.max(dp[i], dp[id] + 1);
-                    }
-                }
+        int [][]dp = new int[n + 10][26]; //s的前i个字符中，以[a..z]为结尾的最长理想子序列的长度
+        for (int i = 1; i <=  n; i++) {
+            int c = cs[i - 1] - 'a';
+            System.arraycopy(dp[i - 1], 0, dp[i], 0, 26);
+            for (int j = Math.max(0,c-k); j <= Math.min(25,c+k) ; j++) {
+                dp[i][c] = Math.max(dp[i][c], dp[i - 1][j] + 1);
             }
-            if (!map.containsKey(cs[i - 1])){
-                map.put(cs[i - 1], new ArrayList<>());
-                map.get(cs[i - 1]).add(i);
-            }else{
-                map.get(cs[i - 1]).add(i);
-            }
-            res = Math.max(res , dp[i]);
         }
-        return res;
+        return Arrays.stream(dp[n]).max().getAsInt();
     }
 
     static class Solution {

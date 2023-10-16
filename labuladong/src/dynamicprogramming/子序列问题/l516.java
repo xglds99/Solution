@@ -20,14 +20,12 @@ public class l516 {
         int[][] dp = new int[n + 10][n + 10];
         char[] chars = s.toCharArray();
         //2.明确base case， s[i -- i]的长度就是1,也是回文序列
-        for (int i = 1; i <= n; i++) {
-            dp[i][i] = 1;
-        }
         //3.明确状态i，，j的改变，引起状态的改变。
         //4.明确状态转移方程  if s[i] == s[j] dp[i][j] = dp[i + 1][j - 1] + 2 表示这两个可以选
         //if s[i] != s[j] dp[i][j] = max(dp[i + 1][j], dp[i][j - 1]) 表示不选s[i]或者s[j]
         //但是因为i的状态由 i + 1的状态转移而来，所以i要倒序遍历
         for (int i = n; i > 0; i--) {
+            dp[i][i] = 1;
             for (int j = i + 1; j <= n; j++) {
                 if (chars[i - 1] == chars[j - 1]) {
                     dp[i][j] = dp[i + 1][j - 1] + 2;

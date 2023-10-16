@@ -1,5 +1,7 @@
 package backtrack;
 
+import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -41,4 +43,44 @@ public class permute_2 {
             }
         }
     }
+
+
+    class Solution{
+        public void main(String[] args) {
+
+        }
+        @Test
+        public void test(){
+            List<String> list = permuteUnique("aabb".toCharArray());
+            System.out.println(list.toString());
+        }
+
+        private static List<String> res = new ArrayList<>();
+        private static StringBuilder t = new StringBuilder();
+        public static List<String> permuteUnique(char[] nums) {
+            dfs(nums, 0, new boolean[nums.length]);
+            return res;
+        }
+
+        public static void dfs(char []nums, int start, boolean []used){
+            if (start == nums.length){
+                res.add(t.toString());
+                return;
+            }
+            for (int i = 0; i < nums.length; i++) {
+                if (i > 0 && nums[i] == nums[i - 1] && !used[i - 1]) continue;
+                if (!used[i]){
+                    t.append(nums[i]);
+                    used[i] = true;
+                    dfs(nums, start + 1, used);
+                    used[i] = false;
+                    t.deleteCharAt(t.length() - 1);
+                }
+            }
+        }
+    }
+
+
+
 }
+

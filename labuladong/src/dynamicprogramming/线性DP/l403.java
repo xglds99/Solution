@@ -9,6 +9,11 @@ public class l403 {
     private final HashMap<Integer, Integer> map = new HashMap<>();
     private final HashMap<String, Boolean> memo = new HashMap<>();
 
+    /**
+     * 青蛙游戏
+     * @param stones
+     * @return
+     */
     public boolean canCross(int[] stones) {
         int n = stones.length;
         for (int i = 0; i < n; i++) {
@@ -26,12 +31,13 @@ public class l403 {
      * @param n
      * @return
      */
+    //从start出发，上一次跳了k步，是否可以到达最后一个格子
     public boolean dfs(int[] stones, int start, int k, int n) {
         String key = start + "_" + k;
         if (memo.containsKey(key)) return memo.get(key);
         if (start == n - 1) return true;
         for (int i = -1; i <= 1; i++) {
-            if (k + i == 0) continue;
+            if (k + i == 0) continue; //保证只能向前走
             int next = stones[start] + k + i;
             if (map.containsKey(next)) {
                 boolean cur = dfs(stones, map.get(next), k + i, n);

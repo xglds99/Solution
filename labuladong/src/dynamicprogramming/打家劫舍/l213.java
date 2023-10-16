@@ -47,13 +47,13 @@ public class l213 {
         }
 
         public int robRange(int[] nums, int start, int end) {
-            int first = nums[start], second = Math.max(nums[start], nums[start + 1]);
+            int []dp = new int[nums.length + 10];
+            dp[start] = nums[start];
+            dp[start + 1] = Math.max(nums[start],nums[start + 1]);
             for (int i = start + 2; i <= end; i++) {
-                int temp = second;
-                second = Math.max(first + nums[i], second);
-                first = temp;
+               dp[i] = Math.max(dp[i - 1], dp[i - 2] + nums[i]);
             }
-            return second;
+            return dp[end];
         }
     }
 }

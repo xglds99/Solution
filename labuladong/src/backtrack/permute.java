@@ -12,6 +12,13 @@ public class permute {
         boolean []used =new boolean[len];
         Deque<Integer> path = new ArrayDeque<>();
         dfs(nums,len,0,used,path);
+        List<Integer> res = new ArrayList<>();
+        for (List<Integer> q: resu){
+            String b = "";
+            for(int a: q) b+=a;
+            res.add(Integer.parseInt(b));
+            System.out.println(b);
+        }
         return resu;
     }
 
@@ -22,15 +29,12 @@ public class permute {
         }
         for(int i = 0; i< len ;i++){
             //怎么样保证选取的元素不会重复，通过使用一个used数组，如果一个元素对应的下表是true，就被使用，不应该被加入列表
-            System.out.println("当前所在层数:" + depth);
             if (!used[i]){
                 path.addLast(nums[i]);
                 used[i] = true;
-                System.out.println("递归之前==>" + path);
                 dfs(nums, len, depth + 1, used, path); //回溯
                 path.removeLast();
                 used[i] = false;
-                System.out.println("递归之后==>" + path);
             }
         }
     }

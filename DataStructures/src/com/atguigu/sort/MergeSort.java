@@ -35,7 +35,6 @@ public class MergeSort {
             }
             if (index >= 0) System.arraycopy(temp, 0, nums, left, index);
         }
-        
     }
         
 

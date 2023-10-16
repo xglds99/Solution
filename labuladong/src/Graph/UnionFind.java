@@ -36,11 +36,13 @@ public class UnionFind {
     private int[] rank;
 
     public UnionFind(int n) {
+        this.rank = new int[n];
         this.parent = new int[n];
         for (int i = 0; i < n; i++) {
             parent[i] = i;
+            rank[i] = 1;
         }
-        this.rank = new int[n];
+
     }
 
     public void union(int x, int y) {
@@ -65,21 +67,6 @@ public class UnionFind {
         return parent[x];
     }
 
-    public static void main(String[] args) {
-        UnionFind un = new UnionFind(10);
-        un.union(0, 3);
-        un.union(3, 5);
-        int i = un.find(5);
-        System.out.println(i);
-
-    }
-
-    @Test
-    public void test(){
-        UnionFind un = new UnionFind(10);
-        un.union(0, 3);
-
-    }
 }
 
 

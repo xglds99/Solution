@@ -6,7 +6,6 @@ public class BinarySearch {
 
     /**
      * 寻到指定元素，找到返回下标，找不到返回-1；
-     *
      * @param nums
      * @param target
      * @return
