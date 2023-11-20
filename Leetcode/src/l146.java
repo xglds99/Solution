@@ -1,10 +1,36 @@
 import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 /**
  * @author xgl
  * @date 2023/6/27 15:39
  */
 public class l146 {
+
+    private static final int MAX_ENTRIES = 100; // 设置缓存的最大容量
+
+    private LinkedHashMap<String,String> cache = new LinkedHashMap<>(MAX_ENTRIES, 0.75f, true) {
+        @Override
+        protected boolean removeEldestEntry(Map.Entry<String, String> eldest) {
+            // 当缓存超过最大容量时，移除最老的元素
+            return size() > MAX_ENTRIES;
+        }
+    };
+
+    public void put(String key, String value) {
+        cache.put(key, value);
+    }
+
+    public String get(String key) {
+        return cache.getOrDefault(key, "");
+    }
+
+
+
+    public static void main(String[] args) {
+
+    }
     class DLinkedList{
         int key;
         int value;
@@ -23,6 +49,7 @@ public class l146 {
         DLinkedList head = new DLinkedList();
         DLinkedList tail = new DLinkedList();
         HashMap<Integer, DLinkedList> cache = new HashMap<Integer, DLinkedList>();
+
 
 
         LRUCache(int capacity){

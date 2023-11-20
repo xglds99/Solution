@@ -39,7 +39,6 @@ import java.util.PriorityQueue;
         int largest = i; // Initialize largest as root
         int l = 2 * i + 1; // left = 2*i + 1
         int r = 2 * i + 2; // right = 2*i + 2
-
         // If left child is larger than root
         if (l < N && arr[l] > arr[largest])
             largest = l;
@@ -58,8 +57,6 @@ import java.util.PriorityQueue;
             heapify(arr, N, largest);
         }
     }
-
-
     /*
      * (最大)堆的向下调整算法
      *
